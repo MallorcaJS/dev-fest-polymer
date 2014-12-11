@@ -1,26 +1,29 @@
 html,body {
   height: 100%;
   margin: 0;
-  background-color: #E5E5E5;
+  background-color: #FFFFFF;
   font-family: 'RobotoDraft', sans-serif;
 }
-.container {
-  width: 80%;
-  margin: 50px auto;
-}
-@media (min-width: 481px) {
-  #tabs {
-    width: 200px;
-  }
-  .container {
-    width: 400px;
-  }
-}
 
 
+core-header-panel {
+  background: white;
+}
+core-toolbar {
+  background-color: #03A9F4;
+}
 #navheader {
   background-color: #56BA89;
 }
 .content {
   padding: 20px;
+}
+
+
+core-image{
+  margin: 0 auto;
+  display: block;
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
 }

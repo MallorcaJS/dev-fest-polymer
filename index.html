@@ -68,7 +68,7 @@
   </core-scaffold>
    -->
 
-   <core-drawer-panel id="drawerPanel" responsiveWidth="500px">
+   <core-drawer-panel id="drawerPanel" responsiveWidth="800px">
 
      <core-header-panel drawer>
 
@@ -92,11 +92,11 @@
 
        <div class="content">
 
-         <core-image preload fade style="width:400px; height:400px;" sizing="cover" src="http://photos2.meetupstatic.com/photos/member/c/1/f/4/highres_111769652.jpeg"></core-image>
+         <core-image preload fade sizing="cover" src="http://photos2.meetupstatic.com/photos/member/c/1/f/4/highres_111769652.jpeg"></core-image>
 
          <paper-tabs selected="{{selected}}">
-           <paper-tab selected="1">Tab 1</paper-tab>
-           <paper-tab selected="2">Tab 2</paper-tab>
+           <paper-tab >Tab 1</paper-tab>
+           <paper-tab >Tab 2</paper-tab>
          </paper-tabs>
 
          <core-pages selected="{{selected}}">
@@ -110,13 +110,6 @@
 
    </core-drawer-panel>
 
-  <script>
-  document.addEventListener('click', function(e) {
-    var pages = document.querySelector('core-pages');
-    pages.selected = (pages.selected + 1) % pages.children.length;
-  });
-
-  </script>
 
 </body>
 
