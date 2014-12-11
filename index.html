@@ -26,6 +26,7 @@
   <link rel="import" href="bower_components/core-pages/core-pages.html">
   <link rel="import" href="bower_components/core-scaffold/core-scaffold.html">
 
+  <link rel="import" href="bower_components/core-animated-pages/transitions/slide-from-right.html">
 
 
   <link rel="import" href="bower_components/paper-checkbox/paper-checkbox.html">
@@ -92,17 +93,16 @@
 
        <div class="content">
 
-         <core-image preload fade style="width:400px; height:400px;" sizing="cover" src="http://photos2.meetupstatic.com/photos/member/c/1/f/4/highres_111769652.jpeg"></core-image>
 
-         <paper-tabs selected="{{selected}}">
-           <paper-tab selected="1">Tab 1</paper-tab>
-           <paper-tab selected="2">Tab 2</paper-tab>
+         <paper-tabs selected="0">
+           <paper-tab selected="0">Tab 1</paper-tab>
+           <paper-tab selected="1">Tab 2</paper-tab>
          </paper-tabs>
 
-         <core-pages selected="{{selected}}">
+         <core-animated-pages selected="{{selected}}" transitions="slide-from-right" >
            <div>Page 1</div>
            <div>Page 2</div>
-         </core-pages>
+         </core-animated-pages>
 
        </div>
 
@@ -111,9 +111,12 @@
    </core-drawer-panel>
 
   <script>
-  document.addEventListener('click', function(e) {
-    var pages = document.querySelector('core-pages');
-    pages.selected = (pages.selected + 1) % pages.children.length;
+  var selected = 1;
+  var tabs = document.querySelector('paper-tabs');
+
+  tabs.addEventListener('click', function(e) {
+    var pages = document.querySelector('core-animated-pages');
+    pages.selected = e.toElement.attributes.selected.value;
   });
 
   </script>
